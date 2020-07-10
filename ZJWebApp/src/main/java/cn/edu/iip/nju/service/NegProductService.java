@@ -30,6 +30,9 @@ public class NegProductService {
             String productName = injureCase.getProductName();
             String[] prods = productName.split(" ");
             for (String prod : prods) {
+                if (prods.length == 0) {
+                    continue
+                }
                 if (!map.containsKey(prod)) {
                     NegProduct negProduct = new NegProduct();
                     negProduct.setProductName(prod);
